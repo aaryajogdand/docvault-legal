@@ -1,69 +1,90 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between relative overflow-hidden selection:bg-indigo-500 selection:text-white">
+      
+      {/* Background Ambient Glow Effects */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none" />
+
+      {/* Header */}
+      <header className="relative z-10 flex justify-between items-center max-w-6xl mx-auto w-full px-6 py-6 border-b border-slate-800/80 backdrop-blur-md">
+        <div className="flex items-center gap-3">
+          <span className="bg-gradient-to-r from-indigo-500 to-violet-600 text-white font-extrabold px-3.5 py-1.5 rounded-xl text-sm tracking-wide shadow-lg shadow-indigo-500/20">
+            SIH0084
+          </span>
+          <h1 className="text-xl font-black tracking-tight text-white">CertiVault <span className="text-indigo-400 font-light">PRO</span></h1>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="flex gap-3">
+          <Link href="/login" className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 rounded-xl text-sm font-medium transition shadow-sm">
+            Institutional Login
+          </Link>
+          <Link href="/portfolio" className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-sm font-medium transition shadow-lg shadow-indigo-600/25">
+            Public Portfolio
+          </Link>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <main className="relative z-10 max-w-5xl mx-auto w-full my-16 px-6 text-center space-y-8">
+        <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs px-4 py-2 rounded-full font-semibold uppercase tracking-wider backdrop-blur-md">
+          <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
+          Smart India Hackathon 2026 Enterprise Solution
+        </div>
+        
+        <h2 className="text-4xl sm:text-7xl font-black text-white tracking-tight leading-[1.1]">
+          Centralized Student Activity & <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-emerald-400 bg-clip-text text-transparent">Verified Credentials</span>
+        </h2>
+        
+        <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto font-normal leading-relaxed">
+          Eliminating scattered spreadsheets, paper approvals, and unverified resume claims with a tamper-proof institutional audit trail.
+        </p>
+
+        {/* Before vs After Grid with Glassmorphism */}
+        <div className="grid md:grid-cols-2 gap-6 text-left mt-16">
+          <div className="bg-slate-900/60 backdrop-blur-xl border border-red-500/20 p-8 rounded-3xl relative overflow-hidden shadow-2xl">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-2xl pointer-events-none" />
+            <div className="text-red-400 font-bold text-xs tracking-widest uppercase mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-red-500" /> The Problem (Before)
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">Scattered & Unverified Records</h3>
+            <ul className="space-y-3 text-slate-400 text-sm">
+              <li className="flex items-start gap-2"><span>•</span> Paper certificates & loose PDF files scattered across independent department files.</li>
+              <li className="flex items-start gap-2"><span>•</span> Manual verification bottlenecks during high-volume placement cycles.</li>
+              <li className="flex items-start gap-2"><span>•</span> Unverifiable claims on resumes causing trust gaps for recruiters.</li>
+            </ul>
+          </div>
+
+          <div className="bg-slate-900/60 backdrop-blur-xl border border-emerald-500/20 p-8 rounded-3xl relative overflow-hidden shadow-2xl">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none" />
+            <div className="text-emerald-400 font-bold text-xs tracking-widest uppercase mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" /> Our Solution (After)
+            </div>
+            <h3 className="text-xl font-bold text-white mb-4">Unified Verifiable Ecosystem</h3>
+            <ul className="space-y-3 text-slate-300 text-sm">
+              <li className="flex items-start gap-2"><span>•</span> One-click student uploads featuring automated SHA-256 duplicate checks.</li>
+              <li className="flex items-start gap-2"><span>•</span> Faculty quick-action review queue with zero-friction audit trails.</li>
+              <li className="flex items-start gap-2"><span>•</span> Instant public digital portfolio export with embedded QR verification.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 pt-8">
+          <Link href="/login" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold rounded-2xl shadow-xl shadow-indigo-600/30 transition transform hover:-translate-y-0.5">
+            Launch Portal & Sign In →
+          </Link>
+          <Link href="/portfolio" className="px-8 py-4 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-200 font-bold rounded-2xl transition backdrop-blur-md">
+            View Live Sample Portfolio
+          </Link>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="relative z-10 text-center text-slate-500 text-xs py-6 border-t border-slate-900 backdrop-blur-md">
+        SIH0084 • Centralized Digital Platform for Student Activity & Achievement Records
+      </footer>
     </div>
   );
 }
