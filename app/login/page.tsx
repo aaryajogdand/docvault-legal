@@ -18,7 +18,7 @@ export default function LoginPage() {
     if (role === "investigator") {
       router.push("/dashboard/case-officer");
     } else {
-      router.push("/dashboard/Supervisor");
+      router.push("/dashboard/supervisor");
     }
   };
 
