@@ -20,7 +20,7 @@ export default function Home() {
           <Link href="/login" className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 rounded-xl text-sm font-medium transition shadow-sm">
             Investigator Login
           </Link>
-          <Link href="/portfolio" className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-sm font-medium transition shadow-lg shadow-indigo-600/25">
+          <Link href="/case-packet" className="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-sm font-medium transition shadow-lg shadow-indigo-600/25">
             Public Evidence Packets
           </Link>
         </div>
@@ -75,7 +75,7 @@ export default function Home() {
           <Link href="/login" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold rounded-2xl shadow-xl shadow-indigo-600/30 transition transform hover:-translate-y-0.5">
             Access Officer Portal & Sign In →
           </Link>
-          <Link href="/portfolio" className="px-8 py-4 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-200 font-bold rounded-2xl transition backdrop-blur-md">
+          <Link href="/case-packet" className="px-8 py-4 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-200 font-bold rounded-2xl transition backdrop-blur-md">
             View Sample Verifiable Evidence Packet
           </Link>
         </div>
